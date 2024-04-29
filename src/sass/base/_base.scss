@@ -1,0 +1,84 @@
+@import "../layout/_media";
+@import "_mixins";
+@import "_variables";
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400';
+
+body, html {
+	font-family: 'Source Sans Pro', sans-serif;
+	height: 100%;
+}
+
+body
+{
+	margin: 0;
+	padding: 0;
+	background: white;
+	font-size: 100%;
+	width: 100%;
+}
+
+li {
+	text-decoration: none;
+	list-style: none;
+	font-style: normal;
+	color: #364350;
+	line-height: 1.6;
+	font-size: 1.2rem;
+	margin: 1rem 0;
+}
+
+a {
+	cursor: pointer;
+}
+
+section {
+	border-radius: 0;
+	width: 100%;
+	max-width: 100%;
+	margin: 0;
+	padding: 1.2em 0 2.4em;
+}
+
+.btn{
+	@include border-radius($rad);
+  background: $button;
+	color: white;
+	width: 120px;
+	height: 50px;
+
+	&:hover {
+		color: $button;
+    text-decoration: none;
+    background-color: white;
+    border: 1px solid $button;
+	}
+}
+
+.clearfix {
+	display: inline-block;
+
+	&:after {
+		visibility: hidden;
+		display: block;
+		font-size: 0;
+		content: " ";
+		clear: both;
+		height: 0;
+	}
+}
+
+input[type="text"],
+input[type="email"] {
+	padding: 10px 20px;
+	border: 1px solid #999;
+	border-radius: 3px;
+	display: block;
+	margin-bottom: 20px;
+	box-sizing: border-box;
+	outline: none;
+	height: 50px;
+
+	&:focus {
+    border-color: #FF6F00;
+	}
+}

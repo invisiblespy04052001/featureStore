@@ -1,0 +1,19 @@
+extends _partials/_splash-layout.jade
+
+block content
+  header.splash__header
+    div.container.splash__logo
+      img.logo(src="img/logo.png")
+  main.splash__content.col-sm-12.clearix
+    div.splash__image
+    section.splash__main
+      div.splash__wrapper
+        form.splash__form(action="https://formspree.io/plopes20587@gmail.com", method="post", onsubmit="return validate()")
+          h1.splash__title American Needs a Hero
+          h3.splash__blurb Keep Informed by joining our movement
+            hr
+          input(type="email" name="_replyto" placeholder="email" class="email")
+          input(type="text" name="zip" placeholder="zip code" class="zip")
+          input(type="submit" class="btn" value="submit")
+        p.splash__link
+          a(href="main.html") Continue to Site
